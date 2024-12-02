@@ -1,36 +1,27 @@
 001010 IDENTIFICATION DIVISION.                                         PROGNAME
-001020                                                                  PROGNAME
 001030 PROGRAM-ID.    PROGNAME.                                         PROGNAME
 001040 AUTHOR.        MMELL.                                            PROGNAME
 001050 INSTALLATION.  AUBURN.                                           PROGNAME
 001060 DATE-WRITTEN.  NOV 29,2024.                                      PROGNAME
 001070 DATE-COMPILED. NOV 29,2024.                                      PROGNAME
 001080 SECURITY.      UNCLASSIFIED.                                     PROGNAME
-001090                                                                  PROGNAME
 001100******************************************************************PROGNAME
 001110*                                                                *PROGNAME
 001120* THIS PROGRAM PRODUCES A POLICY REPORT                          *PROGNAME
 001130*                                                                *PROGNAME
 001140******************************************************************PROGNAME
-001150                                                                  PROGNAME
 002010 ENVIRONMENT DIVISION.                                            PROGNAME
-002020                                                                  PROGNAME
 002030 CONFIGURATION SECTION.                                           PROGNAME
-002040                                                                  PROGNAME
 002050 SOURCE-COMPUTER. X86_64.                                         PROGNAME
 002060 OBJECT-COMPUTER. X86_64.                                         PROGNAME
-002070                                                                  PROGNAME
 002080 INPUT-OUTPUT SECTION.                                            PROGNAME
 002090 FILE-CONTROL.                                                    PROGNAME
 002100     SELECT INPUT-FILE                                            PROGNAME
 002110           ASSIGN TO UT-S-INPUT                                   PROGNAME
 002120     SELECT OUTPUT-FILE                                           PROGNAME
 002130           ASSIGN TO UT-S-PRINT                                   PROGNAME
-002140                                                                  PROGNAME	  
 003010 DATA DIVISION.                                                   PROGNAME
-003020                                                                  PROGNAME
 003030 FILE SECTION.                                                    PROGNAME
-003030                                                                  PROGNAME
 003040 FD  INPUT-FILE                                                   PROGNAME
 003050       RECORD CONTAINS 62 CHARACTERS                              PROGNAME
 003060       LABEL RECORDS ARE STANDARD                                 PROGNAME
@@ -40,7 +31,6 @@
 003100     05  AGENT-NAME-INPUT        PICTURE X(20).                   PROGNAME
 003110     05  INSURANCE-TYPE-INPUT    PICTURE X(10).                   PROGNAME
 003120     05  POLICY-NUMBER-INPUT     PICTURE X(12).                   PROGNAME
-003130                                                                  PROGNAME
 003140 FD  REPORT-FILE                                                  PROGNAME
 003150       RECORD CONTAINS 133 CHARACTERS                             PROGNAME
 003160       LABEL RECORDS ARE OMITTED                                  PROGNAME
@@ -55,12 +45,9 @@
 003190     05  FILLER                  PICTURE X(4).                    PROGNAME
 003190     05  INSURANCE-TYPE-REPORT   PICTURE X(10).                   PROGNAME
 003190     05  FILLER                  PICTURE X(58).                   PROGNAME
-003200                                                                  PROGNAME
 003210 WORKING-STORAGE SECTION.                                         PROGNAME
-003220                                                                  PROGNAME
 003230 01  PROGRAM-INDICATORS.                                          PROGNAME
 003240     05  ARE-THERE-MORE-RECORDS  PICTURE X(3) VALUE 'YES'.        PROGNAME
-003250                                                                  PROGNAME
 004010 PROCEDURE DIVISION.                                              PROGNAME
 004020******************************************************************PROGNAME
 004030* Arithmetic - COMPUTE ADD SUBTRACT MULTIPLY DIVIDE              *PROGNAME
@@ -75,7 +62,6 @@
 004120* Procedure/branching - ALTER EXIT GOTO PERFORM                  *PROGNAME
 004130* Table handling - SEARCH SET                                    *PROGNAME
 004140******************************************************************PROGNAME
-004150                                                                  PROGNAME
 004160******************************************************************PROGNAME
 004170*                                                                *PROGNAME
 004180* THIS PROGRAM READS THE POLICY INPUT RECORDS AND CREATES THE    *PROGNAME
@@ -83,7 +69,6 @@
 004200* EXITS TO THE OPERATING SYSYTEM.                                *PROGNAME
 004210*                                                                *PROGNAME
 004220******************************************************************PROGNAME
-004300                                                                  PROGNAME
 004310 A000-CREATE-POLICY-REPORT.                                       PROGNAME
 004320                                                                  PROGNAME
 004330     OPEN INPUT  INPUT-FILE                                       PROGNAME
@@ -96,7 +81,6 @@
 004400     CLOSE INPUT-FILE                                             PROGNAME
 004410           REPORT-FILE.                                           PROGNAME
 004420     STOP RUN.                                                    PROGNAME
-004430                                                                  PROGNAME
 004440 A001-FORMAT-PRINT-LINE.                                          PROGNAME
 004450     MOVE SPACES TO REPORT-LINE.                                  PROGNAME
 004460     MOVE POLICY-NUMBER-INPUT TO POLICY-NUMBER-REPORT.            PROGNAME
