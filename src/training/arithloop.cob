@@ -35,7 +35,6 @@
            01  WS-DISCNT            PIC 9(02)V99 VALUE 0.
            01  WS-TOTAL-EDIT        PIC Z,ZZZ,ZZ9.99.
 
-
        PROCEDURE DIVISION.
            PERFORM VARYING WS-INDEX FROM 1 BY 1
                UNTIL WS-INDEX > WS-CNT
@@ -60,4 +59,3 @@
            WHEN OTHER
            MOVE 0.00 TO WS-DISCNT
            END-EVALUATE.
-
