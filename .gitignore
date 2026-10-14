@@ -1,0 +1,6 @@
+pkg/
+bin/
+.vscode/
+*.swp
+nohup.out
+launch.json
