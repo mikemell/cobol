@@ -15,34 +15,20 @@
       * Columns 12-72   Area b                                         *
       * Columns 73-80   reserved (system generated number)             *
       ******************************************************************
-
+      /
        ENVIRONMENT DIVISION.
 
        CONFIGURATION SECTION.
 
        SOURCE-COMPUTER. X86_64 Linux.
        OBJECT-COMPUTER. X86_64 Linux.
-
-       INPUT-OUTPUT SECTION.
-
-       FILE-CONTROL.
-
+      /
        DATA DIVISION.
 
        FILE SECTION.
 
        WORKING-STORAGE SECTION.
-
+      /
        PROCEDURE DIVISION.
-      *    Arithmetic - COMPUTE ADD SUBTRACT MULTIPLY DIVIDE
-      *    Compiler directives - COPY REPLACE ENTER USE
-      *    Conditional - EVALUATE IF
-      *    Data movement - INITIALIZE INSPECT MOVE STRING UNSTRING
-      *    Ending - STOP
-      *    Input/output - ACCEPT CLOSE DELETE DISPLAY OPEN REWRITE START
-      *         READ WRITE
-      *    Interprocess communication - CALL CANCEL
-      *    Ordering - MERGE RELEASE RETURN SORT
-      *    Procedure/branching - ALTER EXIT GOTO PERFORM
-      *    Table handling - SEARCH SET
 
+           STOP RUN
