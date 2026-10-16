@@ -40,5 +40,4 @@
        PROCEDURE DIVISION.
       *section-name SECTION.
       *paragraph-name.
-      *    code, code, code.
            STOP RUN

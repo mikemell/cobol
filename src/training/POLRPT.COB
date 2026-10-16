@@ -1,15 +1,11 @@
        IDENTIFICATION DIVISION.
 
-       PROGRAM-ID.    .
+       PROGRAM-ID.    POLRPT.
        AUTHOR.        MICHAEL S. MELL.
        INSTALLATION.  TT ODYSSEY, 41786AL.
-       DATE-WRITTEN.  .
-       DATE-COMPILED. .
-       SECURITY.      [UNCLAS|FOUO|CONFIDENTIAL|SECRET|TOP SECRET].
-
-      ******************************************************************
-      *                                                                *
-      ******************************************************************
+       DATE-WRITTEN.  APRIL 12, 2026.
+       DATE-COMPILED. APRIL 12, 2026.
+       SECURITY.      FOUO.
 
        ENVIRONMENT DIVISION.
 
@@ -23,9 +19,9 @@
        FILE-CONTROL.
 
            SELECT INPUT-FILE
-                 ASSIGN TO UT-S-INPUT
+                 ASSIGN TO UT-S-INPUT.
            SELECT OUTPUT-FILE
-                 ASSIGN TO UT-S-PRINT
+                 ASSIGN TO UT-S-PRINT.
 
        DATA DIVISION.
 
@@ -61,20 +57,7 @@
        01  PROGRAM-INDICATORS.
            05  ARE-THERE-MORE-RECORDS  PICTURE X(3) VALUE 'YES'.
 
-      ******************************************************************
-
        PROCEDURE DIVISION.
-      * Arithmetic - COMPUTE ADD SUBTRACT MULTIPLY DIVIDE
-      * Compiler directives - COPY REPLACE ENTER USE
-      * Conditional - EVALUATE IF
-      * Data movement - INITIALIZE INSPECT MOVE STRING UNSTRING
-      * Ending - STOP
-      * Input/output - ACCEPT CLOSE DELETE DISPLAY OPEN REWRITE START
-      *      READ WRITE
-      * Interprocess communication - CALL CANCEL
-      * Ordering - MERGE RELEASE RETURN SORT
-      * Procedure/branching - ALTER EXIT GOTO PERFORM
-      * Table handling - SEARCH SET
 
        A000-CREATE-POLICY-REPORT.
            OPEN INPUT  INPUT-FILE
